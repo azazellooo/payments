@@ -7,3 +7,4 @@ class AppConfig(AppConfig):
     def ready(self):
         from .jobs import start
         start()
+
