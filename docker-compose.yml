@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    ports:
+      - '8080:8000'
+    command: >
+      sh -c "pip install --upgrade pip &&
+               pip install -r requirements.txt &&
+               chmod +x entrypoint.sh &&
+               touch .env && echo \" SECRET_KEY='' \" >> .env &&
+               sh entrypoint.sh"
+    restart: unless-stopped
+    environment:
+      - HOST_DB=db
+      - NAME_DB=postgres
+      - USER_DB=postgres
+      - PASSWORD_DB=postgres
+      - PORT_DB=5432
+    depends_on:
+      - db
+
+  db:
+    image: postgres:12.3-alpine
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - /usr/src/app/database:/var/lib/postgresql/data
