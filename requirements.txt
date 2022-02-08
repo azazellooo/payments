@@ -1,4 +1,5 @@
 appdirs==1.4.4
+APScheduler==3.8.1
 apt-clone==0.2.1
 apturl==0.5.2
 asgiref==3.4.1
@@ -77,6 +78,7 @@ python-debian===0.1.36ubuntu1
 python-xapp==2.0.1
 python-xlib==0.23
 pytz==2021.3
+pytz-deprecation-shim==0.1.0.post0
 pyxdg==0.26
 PyYAML==5.3.1
 reportlab==3.5.34
@@ -85,6 +87,7 @@ requests-unixsocket==0.2.0
 Rx==1.6.1
 SecretStorage==2.3.1
 setproctitle==1.1.10
+shortuuid==1.0.8
 simplejson==3.16.0
 six==1.16.0
 soupsieve==1.9.5
@@ -94,6 +97,8 @@ tenacity==8.0.1
 tinycss2==1.0.2
 tk==0.1.0
 typing-extensions==3.7.4.3
+tzdata==2021.5
+tzlocal==4.1
 ubuntu-advantage-tools==27.4
 ubuntu-drivers-common==0.0.0
 ufw==0.36
