@@ -1,1 +1,1 @@
-from updater import start
+from .updater import start
